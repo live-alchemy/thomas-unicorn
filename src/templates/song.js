@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -7,9 +8,9 @@ import Seo from "../components/seo"
 
 const SongTemplate = ({ data, location }) => {
   const song = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+  console.dir(song)
+  const siteTitle = data.site.siteMetadata?.title
   const { previous, next } = data
-
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -25,10 +26,52 @@ const SongTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{song.frontmatter.title}</h1>
           <p>{song.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: song.html }}
-          itemProp="articleBody"
-        />
+        {
+          song.frontmatter.image ? (
+            // <StaticImage src={song.image} />
+              <img src={song.frontmatter.image} alt=""/>
+          ) : null
+        }
+        {
+          song.audio ? (
+            <section>
+              <h4>Audio Recording</h4>
+              <audio src={song.audio}></audio>
+            </section>
+          ) : null
+        }
+        {
+          song.instrumental ? (
+            <section>
+              <h4>Instrumental</h4>
+              <audio src={song.instrumental}></audio>
+            </section>
+          ) : null
+        }
+        {
+          song.video ? (
+            <section>
+              <h4>Video</h4>
+              <video src={song.video}></video>
+            </section>
+          ) : null
+        }
+        {
+          song.instructions ? (
+            <section>
+              <h4>Stage direction</h4>
+              <div dangerouslySetInnerHTML={{ __html: song.instructions }}/>
+            </section>
+          ) : null
+        }
+        {
+          song.html ? (
+            <section>
+              <h4>Lyrics</h4>
+              <div dangerouslySetInnerHTML={{ __html: song.html }}/>
+            </section>
+          ) : null
+        }
         <hr />
         <footer>
           <Bio />

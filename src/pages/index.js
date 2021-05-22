@@ -39,7 +39,7 @@ const Home = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={song.fields.slug} itemProp="url">
-                      <span>{`${song.order}. `}</span>
+                      <span>{`${song.frontmatter.order}. `}</span>
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___order], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
       nodes {
         excerpt
         fields {
