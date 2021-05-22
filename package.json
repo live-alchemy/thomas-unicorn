@@ -1,11 +1,11 @@
 {
-  "name": "Thomas&theUnicorn",
+  "name": "ThomasAndTheUnicorn",
   "private": true,
   "description": "Thomas and the Unicorn, a rock opera",
   "version": "0.1.0",
   "author": "The Unicorn",
   "dependencies": {
-    "gatsby": "^3.4.1",
+    "gatsby": "^3.5.1",
     "gatsby-plugin-image": "^1.4.0",
     "gatsby-plugin-manifest": "^3.4.0",
     "gatsby-plugin-offline": "^4.4.0",
@@ -13,14 +13,10 @@
     "gatsby-plugin-sharp": "^3.4.1",
     "gatsby-remark-copy-linked-files": "^3.2.0",
     "gatsby-remark-images": "^4.2.0",
-    "gatsby-remark-prismjs": "^4.2.0",
-    "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-remark-responsive-iframe": "^3.2.0",
-    "gatsby-remark-smartypants": "^3.2.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -30,15 +26,17 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/live-alchemy/thomas-unicorn",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "rock",
+    "opera"
   ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/live-alchemy/thomas-unicorn"
   },
   "scripts": {
     "build": "gatsby build",
