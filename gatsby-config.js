@@ -20,7 +20,8 @@ module.exports = {
     }
   },
   plugins: [
-    `gatsby-plugin-image`, {
+    `gatsby-plugin-image`,
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/songs`,
@@ -58,7 +59,8 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`, {
+    `gatsby-plugin-sharp`,
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Thomas & the Unicorn`,
