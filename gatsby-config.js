@@ -8,7 +8,7 @@ module.exports = {
     description: `A rock opera`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `t_unicorn`,
+      twitter: `unioliviaart`,
     },
   },
   plugins: [
