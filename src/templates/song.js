@@ -6,15 +6,15 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const SongTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const song = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
+        title={song.frontmatter.title}
+        description={song.frontmatter.description || song.excerpt}
       />
       <article
         className="blog-post"
@@ -22,11 +22,11 @@ const SongTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 itemProp="headline">{song.frontmatter.title}</h1>
+          <p>{song.frontmatter.date}</p>
         </header>
         <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: song.html }}
           itemProp="articleBody"
         />
         <hr />
@@ -64,7 +64,7 @@ const SongTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default SongTemplate
 
 export const pageQuery = graphql`
   query SongPostBySlug(
@@ -83,8 +83,9 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description
+        order
+        image
+        audio
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
