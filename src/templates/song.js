@@ -26,7 +26,7 @@ const SongTemplate = ({ data, location }) => {
           <p>{song.frontmatter.date}</p>
         </header>
         {
-          song.frontmatter.image ? <img src={song.frontmatter.image} alt=""/>) : null
+          song.frontmatter.image ? <img src={song.frontmatter.image} alt=""/> : null
         }
         {
           song.audio ? (
