@@ -78,7 +78,6 @@ export const pageQuery = graphql`
         }
         frontmatter {
           title
-          description
           order
         }
       }
