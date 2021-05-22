@@ -8,7 +8,6 @@ import Seo from "../components/seo"
 
 const SongTemplate = ({ data, location }) => {
   const song = data.markdownRemark
-  console.dir(song)
   const siteTitle = data.site.siteMetadata?.title
   const { previous, next } = data
   return (
@@ -18,7 +17,7 @@ const SongTemplate = ({ data, location }) => {
         description={song.frontmatter.description || song.excerpt}
       />
       <article
-        className="blog-post"
+        className="song"
         itemScope
         itemType="http://schema.org/Article"
       >
