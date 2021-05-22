@@ -18,5 +18,5 @@ collections:
       - {label: "Audio", name: "audio", widget: "file", required: false}
       - {label: "Instrumental", name: "instrumental", widget: "file", required: false}
       - {label: "Video", name: "video", widget: "file", required: false}
-      - {label: "Lyrics", name: "lyrics", widget: "markdown", required: false}
+      - {label: "Lyrics", name: "body", widget: "markdown", required: false}
       - {label: "Order", name: "order", widget: "number", required: true}
