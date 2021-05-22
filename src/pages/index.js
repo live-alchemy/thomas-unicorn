@@ -5,19 +5,17 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const songs = data.allMarkdownRemark.nodes
 
-  if (posts.length === 0) {
+  if (songs.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
         <Seo title="Thomas & the Unicorn" />
         <Bio />
         <p>
-          No songs found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No songs found. The Unicorn is sad!
         </p>
       </Layout>
     )
@@ -28,28 +26,28 @@ const BlogIndex = ({ data, location }) => {
       <Seo title="Thomas & the Unicorn" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {songs.map(song => {
+          const title = song.frontmatter.title || song.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <li key={song.fields.slug}>
               <article
-                className="post-list-item"
+                className="song-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
                   <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                    <Link to={song.fields.slug} itemProp="url">
+                      <span>{`${song.order}. `}</span>
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
+                      __html: song.excerpt,
                     }}
                     itemProp="description"
                   />
@@ -63,7 +61,7 @@ const BlogIndex = ({ data, location }) => {
   )
 }
 
-export default BlogIndex
+export default Home
 
 export const pageQuery = graphql`
   query {
@@ -72,16 +70,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: DESC }) {
       nodes {
         excerpt
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           title
           description
+          order
         }
       }
     }
