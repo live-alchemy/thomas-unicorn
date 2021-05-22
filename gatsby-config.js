@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Thomas & the Unicorn`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `The Unicorn`,
+      summary: `a mystical being of great imaginings.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A rock opera`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `t_unicorn`,
     },
   },
   plugins: [
@@ -112,13 +112,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Thomas & the Unicorn`,
+        short_name: `Unicorn`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/unicorn-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
