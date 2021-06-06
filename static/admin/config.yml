@@ -14,10 +14,10 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "song"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Stage Instructions", name: "instructions", widget: "markdown"}
+      - {label: "Lyrics", name: "body", widget: "markdown", required: false}
+      - {label: "Stage Instructions", name: "instructions", widget: "markdown", required: false}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Audio", name: "audio", widget: "file", required: false}
       - {label: "Instrumental", name: "instrumental", widget: "file", required: false}
       - {label: "Video", name: "video", widget: "file", required: false}
-      - {label: "Lyrics", name: "body", widget: "markdown", required: false}
-      - {label: "Order", name: "order", widget: "number", required: true}
+      - {label: "Order", name: "order", widget: "number", required: false}
