@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: song
 title: "Index"
 instructions: Index
 order: 0

@@ -8,8 +8,10 @@ import Seo from "../components/seo"
 
 const SongTemplate = ({ data, location }) => {
   const song = data.markdownRemark
+  const { audio, instrumental, video, instructions } = song.frontmatter
   const siteTitle = data.site.siteMetadata?.title
   const { previous, next } = data
+
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
@@ -29,34 +31,34 @@ const SongTemplate = ({ data, location }) => {
           song.frontmatter.image ? <img src={song.frontmatter.image} alt=""/> : null
         }
         {
-          song.audio ? (
+          audio ? (
             <section>
               <h4>Audio Recording</h4>
-              <audio src={song.audio}></audio>
+              <audio controls src={audio} />
             </section>
           ) : null
         }
         {
-          song.instrumental ? (
+          instrumental ? (
             <section>
               <h4>Instrumental</h4>
-              <audio src={song.instrumental}></audio>
+              <audio controls src={instrumental} />
             </section>
           ) : null
         }
         {
-          song.video ? (
+          video ? (
             <section>
               <h4>Video</h4>
-              <video src={song.video}></video>
+              <video src={video}></video>
             </section>
           ) : null
         }
         {
-          song.instructions ? (
+          instructions ? (
             <section>
               <h4>Stage direction</h4>
-              <div dangerouslySetInnerHTML={{ __html: song.instructions }}/>
+              <div dangerouslySetInnerHTML={{ __html: instructions }}/>
             </section>
           ) : null
         }
