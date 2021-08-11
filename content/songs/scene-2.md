@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Scene 2 "
+title: "Scene 2 : Thomas Meets the Woodsman"
 order: 2
 ---
 Scene 2
