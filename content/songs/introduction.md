@@ -1,6 +1,6 @@
 ---
 layout: song
-title: "Scene 1 "
+title: "Scene 1 : In the Astral Plane "
 instructions: Narrator
 order: 1
 ---
