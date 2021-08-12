@@ -58,6 +58,7 @@ instructions: >-
 
 
   2: Not here to have fun *(exits)*
+image: /uploads/workwork.png
 audio: /uploads/townspeople_theme.mp3
 order: 3
 ---
