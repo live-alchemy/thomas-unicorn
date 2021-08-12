@@ -1,6 +1,7 @@
 ---
 layout: song
 title: "Scene 4: Thomas Meets Hafiz "
+order: 4
 ---
 Scene 4:
 
