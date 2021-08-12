@@ -59,7 +59,7 @@ instructions: >-
 
   2: Not here to have fun *(exits)*
 audio: /uploads/townspeople_theme.mp3
-order: 5
+order: 3
 ---
 *Part 1*
 
