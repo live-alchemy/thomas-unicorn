@@ -1,6 +1,7 @@
 ---
 layout: song
 title: "Scene 5: Thomas meets the Crow "
+order: 5
 ---
 
 
