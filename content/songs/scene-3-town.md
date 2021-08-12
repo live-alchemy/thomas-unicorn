@@ -1,6 +1,7 @@
 ---
 layout: song
 title: "Scene 3 : Town "
+order: 3
 ---
 Scene 3:
 
