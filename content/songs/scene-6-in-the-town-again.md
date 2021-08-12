@@ -1,6 +1,7 @@
 ---
 layout: song
 title: "Scene 6: in the Town again "
+order: 6
 ---
 Scene 6
 
